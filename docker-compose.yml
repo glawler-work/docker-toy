@@ -7,13 +7,13 @@ services:
     networks:
       - webnet
   redis:
-      image: redis
-      ports:
-        - "6379:6379"
-      volumes:
-        - "/home/docker/data:/data"
-      command: redis-server --appendonly yes --protected-mode no
-      networks:
-        - webnet
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - "/home/docker/data:/data"
+    command: redis-server --appendonly yes --protected-mode no
+    networks:
+      - webnet
 networks:
   webnet:
